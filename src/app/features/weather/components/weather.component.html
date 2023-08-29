@@ -1,0 +1,22 @@
+<!-- weather.component.html -->
+<mat-form-field>
+  <input matInput type="text" placeholder="Digite o nome da cidade" [(ngModel)]="city" 
+    (keyup.enter)="searchWeather()"/>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="searchWeather()">Buscar</button>
+<mat-card *ngIf="weatherData" [ngClass]="getWeatherCardClass()">
+  <mat-card-header class="card-header">
+    <mat-card-title class="title-text">{{ weatherData.name }}, {{ weatherData.sys.country }}</mat-card-title>
+    <img class="weather-icon" src="https://openweathermap.org/img/wn/{{ specificWeatherData.icon }}@2x.png" alt="">
+  </mat-card-header>
+  <mat-card-content>
+    <p>Temperatura: {{ weatherData.main.temp }}°C</p>
+    <p>Maxima: {{ weatherData.main.temp_max }}°C</p>
+    <p>Minima: {{ weatherData.main.temp_min }}°C</p>
+    <p>Humidade: {{ weatherData.main.humidity }}%</p>
+    <p></p>
+    <!-- Mais informações podem ser exibidas aqui -->
+  </mat-card-content>
+</mat-card>
+
+  

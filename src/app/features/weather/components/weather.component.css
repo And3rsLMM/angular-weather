@@ -1,0 +1,22 @@
+/* styles.css */
+.card-header {
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-text {
+    text-align: center;
+}
+
+.weather-icon {
+    height: 80px;
+    width: 80px;
+}
+
+.warm-weather-card {
+    background: linear-gradient(to bottom, #ffffff, #ffcc00);
+}
+
+.cool-weather-card {
+    background: linear-gradient(to bottom, #ffffff, #007bff);
+}
